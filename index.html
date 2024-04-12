@@ -140,6 +140,7 @@
             position: fixed;
             top: 50%;
             left: 50%;
+width: 69%;
             transform: translate(-50%, -50%);
             background-color: white;
             padding: 20px;
@@ -250,19 +251,40 @@
 </div>
 
 <div id="reseñaPopup" class="reseña-container">
-    <h2>Reseña</h2>
-    <div class="nombre">Juan Pérez</div>
-    <div class="comentario">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod metus id congue vestibulum.
+    <h2>Reseñas</h2>
+    <div class="reseña">
+        <div class="nombre">Juan Pérez</div>
+        <div class="comentario">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod metus id congue vestibulum.
+        </div>
+        <div class="puntuación">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <i class="far fa-star"></i>
+        </div>
+        <div class="hora">12 de abril, 2024 - 10:30 AM</div>
     </div>
-    <div class="puntuación">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star-half-alt"></i>
-        <i class="far fa-star"></i>
+    <div class="reseña">
+        <div class="nombre">ELizeum Pérez</div>
+        <div class="comentario">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod metus id congue vestibulum.
+        </div>
+        <div class="puntuación">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <i class="far fa-star"></i>
+        </div>
+        <div class="hora">12 de abril, 2024 - 10:30 AM</div>
     </div>
-    <div class="hora">12 de abril, 2024 - 10:30 AM</div>
+
+    <!-- Añade más reseñas aquí si es necesario -->
+
+    <textarea placeholder="Escribe tu reseña aquí"></textarea>
+    <button>Enviar Reseña</button>
     <button onclick="cerrarReseña()">Cerrar</button>
 </div>
 
@@ -296,9 +318,11 @@
     });
 
 
+    
+
     // Función para abrir el popup de la reseña
     function abrirReseña() {
-        document.getElementById("reseñaPopup").style.display = "block";
+        document.getElementById("reseñaPopup").style.display = "flex";
     }
 
     // Función para cerrar el popup de la reseña
