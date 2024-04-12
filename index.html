@@ -178,7 +178,7 @@
 <div class="header">
     <i class="fa-solid fa-star"></i>
     <img src="https://i.postimg.cc/L8Ygt3rc/sushiwakka-express-15802186-167526587062105-6391198308982849536-n.jpg" alt="Logo" class="logo">
-    <i class="fa-solid fa-comments"></i>
+    <i id="commentsIcon" class="fa-solid fa-comments"></i>
 </div>
 
 <div id="popup" class="popup">
@@ -296,8 +296,8 @@
     });
 
 
-     // Función para abrir el popup de la reseña
-     function abrirReseña() {
+    // Función para abrir el popup de la reseña
+    function abrirReseña() {
         document.getElementById("reseñaPopup").style.display = "block";
     }
 
@@ -305,6 +305,9 @@
     function cerrarReseña() {
         document.getElementById("reseñaPopup").style.display = "none";
     }
+
+    // Agrega un evento de clic al icono de comentarios para abrir el popup de la reseña
+    document.getElementById("commentsIcon").addEventListener("click", abrirReseña);
 </script>
 </body>
 </html>
