@@ -136,18 +136,21 @@
         }
 
         .reseña-container {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-width: 69%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            z-index: 3000;
-        }
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 69%;
+    max-height: 80%; /* Altura máxima del contenedor de reseñas */
+    overflow-y: auto; /* Agrega scroll vertical cuando el contenido exceda la altura máxima */
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 3000;
+}
+
 
         .reseña-container h2 {
             font-size: 1.5rem;
@@ -171,6 +174,12 @@ width: 69%;
             font-size: 0.8rem;
             color: #888;
         }
+
+        .fa-star-half-alt:before, .fa-star-half-stroke:before {
+    content: "\f5c0";
+    color: gold;
+    font-size: 24px;
+}
 
     </style>
 </head>
