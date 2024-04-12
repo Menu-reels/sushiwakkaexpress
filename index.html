@@ -135,6 +135,42 @@
             margin: 0;
         }
 
+        .reseña-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 3000;
+        }
+
+        .reseña-container h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .reseña-container .fa-star {
+            color: gold;
+        }
+
+        .reseña-container .nombre {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .reseña-container .comentario {
+            margin-bottom: 10px;
+        }
+
+        .reseña-container .hora {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
     </style>
 </head>
 <body>
@@ -212,6 +248,24 @@
         <img src="https://menu-reels.github.io/web/imagen5.png" alt="Imagen 5" class="categoria-imagen">
     </div>
 </div>
+
+<div id="reseñaPopup" class="reseña-container">
+    <h2>Reseña</h2>
+    <div class="nombre">Juan Pérez</div>
+    <div class="comentario">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod metus id congue vestibulum.
+    </div>
+    <div class="puntuación">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+        <i class="far fa-star"></i>
+    </div>
+    <div class="hora">12 de abril, 2024 - 10:30 AM</div>
+    <button onclick="cerrarReseña()">Cerrar</button>
+</div>
+
 <script>
     window.onload = function() {
         document.getElementById("popup").style.display = "block";
@@ -240,6 +294,17 @@
             observer.observe(container);
         });
     });
+
+
+     // Función para abrir el popup de la reseña
+     function abrirReseña() {
+        document.getElementById("reseñaPopup").style.display = "block";
+    }
+
+    // Función para cerrar el popup de la reseña
+    function cerrarReseña() {
+        document.getElementById("reseñaPopup").style.display = "none";
+    }
 </script>
 </body>
 </html>
